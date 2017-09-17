@@ -1,0 +1,47 @@
+{
+  "name": "protium",
+  "bin": {
+    "protium": "./bin/cli"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jon Jaques <jon@jonjaques.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/debug": "^0.0.30",
+    "@types/express": "^4.0.37",
+    "@types/lodash": "^4.14.74",
+    "@types/tapable": "^0.2.4",
+    "@types/webpack": "^3.0.10",
+    "@types/webpack-dev-middleware": "^1.9.3",
+    "@types/webpack-hot-middleware": "^2.16.0",
+    "@types/yargs": "^8.0.2",
+    "axios": "^0.16.2",
+    "debug": "^3.0.1",
+    "express": "^4.15.4",
+    "express-http-proxy": "^1.0.6",
+    "lodash": "^4.17.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "tapable": "^0.2.8",
+    "ts-loader": "^2.3.7",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "tslint-react": "^3.2.0",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2",
+    "webpack-hot-middleware": "^2.19.1",
+    "webpack-hot-server-middleware": "^0.1.0",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "ts-node src/server/runner",
+    "lint": "tslint --project .",
+    "test": "protium"
+  }
+}

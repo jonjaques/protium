@@ -1,0 +1,14 @@
+#!/usr/bin/env ts-node
+
+import * as yargs from 'yargs'
+import DevTools from '../src/lib/devtools'
+console.log('hello')
+export const program = yargs
+  .usage('Use a command or use -h for help.')
+  .command('build', 'Builds static files for your sites', (args) => {
+    // const devtools = new DevTools()
+    // devtools.build()
+    return args
+  })
+  .help()
+  .argv

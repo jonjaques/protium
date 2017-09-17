@@ -1,0 +1,13 @@
+{
+  "name": "protium-prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "protiumfile.js",
+  "scripts": {
+    "build": "protium build",
+    "dev": "protium dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {}
+}

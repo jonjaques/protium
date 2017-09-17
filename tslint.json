@@ -1,0 +1,30 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "jsx-wrap-multiline": false,
+    "quotemark": {
+      "options": ["single", "jsx-double"]
+    },
+    "semicolon": {
+      "options": ["never"]
+
+    },
+    "import-spacing": false,
+    "no-consecutive-blank-lines": {
+      "severity": "warn"
+    },
+    "no-console": {
+      "severity": "warn"
+    },
+    "no-empty": {
+      "severity": "warn"
+    },
+    "no-empty-interface": {
+      "severity": "warn"
+    },
+    "no-submodule-imports": false,
+    "no-trailing-whitespace": {
+      "severity": "warn"
+    }
+  }
+}
