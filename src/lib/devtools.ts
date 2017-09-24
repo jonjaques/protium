@@ -11,6 +11,7 @@ interface IDevToolsOptions {
 }
 
 type DevToolsWatchOptions = Webpack.Compiler.WatchOptions
+type DevToolsWatchCallback = Webpack.Compiler.Handler
 type DevToolsWatcher = Webpack.Compiler.Watching
 type DevToolsStats = Webpack.Stats
 
@@ -29,32 +30,23 @@ export default class DevTools {
 
   constructor(options?: IDevToolsOptions) {
     this.options = {...DevTools.defaults, ...options}
-    this.compiler = Webpack(this.compilerConfig())
   }
 
   public build(): Promise<DevToolsStats> {
     return new Promise((resolve, reject) => {
-      this.compiler.run((err, stats) => {
+      const compiler = Webpack(this.compilerConfig())
+      compiler.run((err, stats) => {
         if (err) {
           return reject(err)
         }
-        PRODUCTION
-          ? log('Build completed successfully')
-          : log(stats.toString(this.options.stats))
-
         resolve(stats)
       })
     })
   }
 
-  public middleware() {
-
-  }
-
-  public watch(options: DevToolsWatchOptions): DevToolsWatcher  {
-    return this.compiler.watch(options, (err, stats) => {
-      log(err || stats.toString())
-    })
+  public watch(options: DevToolsWatchOptions, cb: DevToolsWatchCallback): DevToolsWatcher  {
+    const compiler = Webpack(this.compilerConfig())
+    return compiler.watch(options, cb)
   }
 
   private compilerConfig() {

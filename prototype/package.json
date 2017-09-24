@@ -5,9 +5,12 @@
   "main": "protiumfile.js",
   "scripts": {
     "build": "protium build",
-    "dev": "protium dev"
+    "dev": "protium dev",
+    "help": "protium --help"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "pretty-error": "^2.1.1"
+  }
 }
